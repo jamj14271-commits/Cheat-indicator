@@ -1,23 +1,27 @@
-# {{ name }}
-This is where she makes a mod.
+# Cheat Indicator Pro 🚨
 
-<img src="logo.png" width="150" alt="the mod's logo" />
+The most badass(Bá Khí) cheat indicator mod in Vietnam.
 
-*Update logo.png to change your mod's icon (please)*
+![Logo](logo.png)
 
-## Getting started
-We recommend heading over to [the getting started section on our docs](https://docs.geode-sdk.org/getting-started/) for useful info on what to do next.
+> "I swear I wasn't cheating, my game was just lagging." 
+> — every person this mod has ever turned red
 
-## Build instructions
-For more info, see [our docs](https://docs.geode-sdk.org/getting-started/create-mod#build)
-```sh
-# Assuming you have the Geode CLI set up already
-geode build
-```
+## What does it do?
 
-# Resources
-* [Geode SDK Documentation](https://docs.geode-sdk.org/)
-* [Geode SDK Source Code](https://github.com/geode-sdk/geode/)
-* [Geode CLI](https://github.com/geode-sdk/cli)
-* [Bindings](https://github.com/geode-sdk/bindings/)
-* [Dev Tools](https://github.com/geode-sdk/DevTools)
+It watches you play and judges you silently. If something looks fishy, the dot turns **red**.
+
+- **Speed and physics scan:** if your speed and physics don't agree with each other, someone is lying. Usually it's not the mod.
+- **Click scan:** clicking like a robot? The mod notices. Humans are not that consistent.
+- **Mod scan:** checks your installed mods and gives them the "are you sure about that?" look.
+- **Run reports:** saves a report when you beat a level, so the evidence is ready for court.
+
+## Disclaimer
+
+This mod gives warnings, not verdicts. A red dot can also be caused by lag or unstable FPS, so please don't start a war in the comments. 
+
+## Install
+
+Grab the `.geode` file from the latest build in the Actions tab and drop it in your Geode `mods` folder. Easy.
+
+## Build
