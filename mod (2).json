@@ -1,0 +1,117 @@
+{
+	"geode": "5.11.2",
+	"gd": {
+		"win": "2.2081",
+		"android": "2.2081",
+		"mac": "2.2081",
+		"ios": "2.2081"
+	},
+	"id": "tudeptraiii.cheat-indicator",
+	"name": "Cheat Indicator Pro",
+	"version": "v0.1.0-alpha.1",
+	"developer": "tudeptraiii",
+	"description": "Green/yellow/red indicator that flags speedhack, abnormal physics rate, noclip, suspicious mods and bot-like clicks. Saves a report for every completed run.",
+	"dependencies": {
+		"geode.node-ids": ">=v1.23.3"
+	},
+	"settings": {
+		"enabled": {
+			"type": "bool",
+			"name": "Enable indicator",
+			"default": true,
+			"description": "Turns the whole mod on or off."
+		},
+		"dot-size": {
+			"type": "float",
+			"name": "Dot size",
+			"default": 5.0,
+			"min": 2.0,
+			"max": 20.0,
+			"control": {
+				"slider": true
+			}
+		},
+		"dot-opacity": {
+			"type": "float",
+			"name": "Dot opacity",
+			"default": 1.0,
+			"min": 0.1,
+			"max": 1.0,
+			"control": {
+				"slider": true
+			}
+		},
+		"dot-corner": {
+			"type": "string",
+			"name": "Dot position",
+			"default": "top-left",
+			"one-of": [
+				"top-left",
+				"top-right",
+				"bottom-left",
+				"bottom-right"
+			],
+			"description": "Corner of the screen: top-left, top-right, bottom-left or bottom-right."
+		},
+		"tps-limit": {
+			"type": "float",
+			"name": "Physics (TPS) limit",
+			"default": 240.0,
+			"min": 60.0,
+			"max": 480.0,
+			"description": "Physics rate above this value is flagged."
+		},
+		"red-seconds": {
+			"type": "float",
+			"name": "Red light duration (seconds)",
+			"default": 5.0,
+			"min": 1.0,
+			"max": 60.0,
+			"description": "How long the light stays red after a high-confidence detection."
+		},
+		"check-timescale": {
+			"type": "bool",
+			"name": "Speed / time scale detection",
+			"default": true,
+			"description": "Detects game speed changes that the level does not explain."
+		},
+		"check-noclip": {
+			"type": "bool",
+			"name": "Noclip detection (heuristic)",
+			"default": true,
+			"description": "Flags when deaths are being blocked. May need tuning."
+		},
+		"scan-mods": {
+			"type": "bool",
+			"name": "Scan for suspicious mods",
+			"default": true,
+			"description": "A loaded mod only turns the light yellow, never red."
+		},
+		"extra-hack-ids": {
+			"type": "string",
+			"name": "Extra suspicious mod IDs",
+			"default": "",
+			"description": "Comma-separated mod IDs, no spaces."
+		},
+		"save-report": {
+			"type": "bool",
+			"name": "Save run report on level complete",
+			"default": true,
+			"description": "Writes a JSON report with flags and inputs to the mod save folder."
+		},
+		"yellow-seconds": {
+			"type": "float",
+			"name": "Yellow light duration (seconds)",
+			"description": "How long the light stays yellow after a warning.",
+			"default": 3.0,
+			"min": 1.0,
+			"max": 60.0
+		},
+		"debug-log": {
+			"type": "bool",
+			"name": "Debug logging",
+			"description": "Logs FPS, steps per second and ratios every second. Useful for troubleshooting.",
+			"default": false
+		}
+	}
+}
