@@ -122,7 +122,7 @@ namespace {
             if (!s.empty()) ids.insert(s);
         }
         for (auto mod : Loader::get()->getAllMods()) {
-            if (!mod->isEnabled()) continue;
+            if (!mod->isLoaded()) continue;
             if (ids.count(mod->getID())) {
                 g_hackMods.insert(mod->getID());
                 flag("mod hack dang bat: " + mod->getID());
@@ -392,9 +392,9 @@ namespace {
 
 // ------------------------------------------------------------------ hooks
 class $modify(CheatBaseLayer, GJBaseGameLayer) {
-    void processCommands(float dt) {
+    void processCommands(float dt, bool isHalfTick, bool isLastTick) {
         g_steps++;
-        GJBaseGameLayer::processCommands(dt);
+        GJBaseGameLayer::processCommands(dt, isHalfTick, isLastTick);
     }
 
     void handleButton(bool down, int button, bool isPlayer1) {
